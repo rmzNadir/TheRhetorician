@@ -32,9 +32,13 @@ export default function Model() {
       ></orbitControls>
     );
   };
-  const group = useRef();
+  const firstBand = useRef();
+  const secondBand = useRef();
+  const thirdBand = useRef();
   useFrame(() => {
-    group.current.rotation.z += 0.004;
+    firstBand.current.rotation.z += 0.003
+    secondBand.current.rotation.z += 0.004
+    thirdBand.current.rotation.z += 0.005
   });
   const { nodes, materials } = useLoader(GLTFLoader, "/models/scene.glb");
 
@@ -57,20 +61,22 @@ export default function Model() {
           </mesh>
         </group>
         <group
-          ref={group}
           position={[0.16, -0.17, 2]}
           rotation={[-0.1, 0.3, 0]}
           scale={[0.89, 0.89, 0.89]}
         >
           <mesh
+            ref={firstBand}
             material={materials.Crown}
             geometry={nodes.nimbus002_0.geometry}
           />
           <mesh
+          ref={secondBand}
             material={materials.Crown}
             geometry={nodes.nimbus001_0.geometry}
           />
           <mesh
+          ref={thirdBand}
             material={materials.Crown}
             geometry={nodes.nimbus003_0.geometry}
           />
