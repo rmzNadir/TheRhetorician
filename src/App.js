@@ -20,7 +20,7 @@ export default function App() {
           <h1 style={{color:'white'}}>Loading...</h1>
         </div>
       )}
-      <Canvas>
+      <Canvas style={{cursor:'grab'}}>
         <directionalLight intensity={0.5} />
         {load ? (
           <>
