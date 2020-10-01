@@ -1,4 +1,3 @@
-
 import React, { useRef } from "react";
 import { useLoader, useFrame, extend, useThree } from "react-three-fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -7,9 +6,6 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 extend({ OrbitControls });
 
 export default function Model() {
-  
-
-
   const Controls = () => {
     const controls = useRef();
     const { camera, gl } = useThree();
@@ -28,14 +24,14 @@ export default function Model() {
   const secondBand = useRef();
   const thirdBand = useRef();
   useFrame(() => {
-    firstBand.current.rotation.z += 0.003
-    secondBand.current.rotation.z += 0.004
-    thirdBand.current.rotation.z += 0.005
+    firstBand.current.rotation.z += 0.003;
+    secondBand.current.rotation.z += 0.004;
+    thirdBand.current.rotation.z += 0.005;
   });
   const { nodes, materials } = useLoader(GLTFLoader, "/models/scene.glb");
 
   return (
-    <group dispose={null} scale={[1,1,1]}>
+    <group dispose={null} scale={[1, 1, 1]}>
       <group rotation={[-Math.PI / 2, 0, -0.1]}>
         <group position={[-0.27, 0.12, -1.04]}>
           <mesh
@@ -63,12 +59,12 @@ export default function Model() {
             geometry={nodes.nimbus002_0.geometry}
           />
           <mesh
-          ref={secondBand}
+            ref={secondBand}
             material={materials.Crown}
             geometry={nodes.nimbus001_0.geometry}
           />
           <mesh
-          ref={thirdBand}
+            ref={thirdBand}
             material={materials.Crown}
             geometry={nodes.nimbus003_0.geometry}
           />
