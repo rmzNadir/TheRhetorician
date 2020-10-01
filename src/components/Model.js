@@ -7,12 +7,9 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 extend({ OrbitControls });
 
 export default function Model() {
-<<<<<<< HEAD
-=======
   
 
 
->>>>>>> Develop
   const Controls = () => {
     const controls = useRef();
     const { camera, gl } = useThree();
