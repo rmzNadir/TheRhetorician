@@ -2,6 +2,7 @@ import React, { Suspense, useState, useEffect } from "react";
 import { Canvas } from "react-three-fiber";
 import "./App.css";
 import Model from "./components/Model";
+import Background from "./components/Background"
 import Loading from "./components/Loading";
 
 export default function App() {
@@ -23,11 +24,11 @@ export default function App() {
         <directionalLight intensity={0.5} />
         {load ? (
           <>
-            
             <Loading />
           </>
         ) : (
           <Suspense fallback={<Loading />}>
+            <Background/>
             <Model />
           </Suspense>
         )}

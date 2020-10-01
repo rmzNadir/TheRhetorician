@@ -17,13 +17,14 @@ function Loading() {
       <orbitControls
         ref={controls}
         autoRotate
+        autoRotateSpeed={43.4}
         args={[camera, gl.domElement]}
       ></orbitControls>
     );
   };
 
   return (
-        <group rotation={[ 0, 50, 50]}>
+        <group rotation={[ 45, -35.3, 0]}>
           <mesh> 
           <Controls />
 
