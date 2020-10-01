@@ -21,15 +21,15 @@ export default function App() {
           <h1 style={{color:'white'}}>Loading...</h1>
         </div>
       )}
-      <Canvas style={{cursor:'grab' }}>
+      <Canvas style={{cursor:'grab'}}>
         <directionalLight intensity={0.5} />
         {load ? (
           <>
             <Loading />
           </>
         ) : (
-          <Suspense  fallback={<Loading />}>
-            <Background />
+          <Suspense fallback={<Loading />}>
+            <Background/>
             <Model />
           </Suspense>
         )}

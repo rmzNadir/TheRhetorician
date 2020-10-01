@@ -24,7 +24,7 @@ function Loading() {
   };
 
   return (
-        <group rotation={[ 45,-35.3,0]}>
+        <group rotation={[ 45, -35.3, 0]}>
           <mesh> 
           <Controls />
 
