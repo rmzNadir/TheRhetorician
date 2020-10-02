@@ -10,7 +10,7 @@ export default function Model(props) {
   console.log(materials)
   return (
     <group ref={group} {...props} dispose={null} scale={[0.1,0.1,0.1]}>
-      <group rotation={[-Math.PI / 2, 2.527, 0]}>
+      <group rotation={[-Math.PI / 2, 2.527, -0.069]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group  position={[6, 20,-85]} rotation={[-0.23, 0.23555, 2.573]} >
             <mesh material={materials.black} geometry={nodes.Plane_black_0.geometry} />
