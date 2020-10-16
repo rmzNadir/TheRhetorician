@@ -46,7 +46,7 @@ export default function Model() {
           <mesh
             geometry={nodes.mentor_roman_retopo_0.geometry}
           >
-            <Controls />
+            {/* <Controls /> */}
             <meshStandardMaterial
               wireframe
               attach="material"
